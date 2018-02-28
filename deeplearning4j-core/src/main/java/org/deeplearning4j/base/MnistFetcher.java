@@ -39,23 +39,28 @@ public class MnistFetcher {
     protected static final String LOCAL_DIR_NAME = "MNIST";
     protected File FILE_DIR = new File(BASE_DIR, LOCAL_DIR_NAME);
 
+    // org's url
+    //private static final String basicURL = "http://deeplearning4j-resources.westus2.cloudapp.azure.com";
+    
+    // private url
+    private static final String basicURL = "http://yann.lecun.com/exdb";
+
     private File fileDir;
-    private static final String TRAINING_FILES_URL = "http://deeplearning4j-resources.westus2.cloudapp.azure.com/mnist/train-images-idx3-ubyte.gz";
+    private static final String TRAINING_FILES_URL = basicURL+"/mnist/train-images-idx3-ubyte.gz";
     private static final String TRAINING_FILES_MD_5 = "f68b3c2dcbeaaa9fbdd348bbdeb94873";
     private static final String TRAINING_FILES_FILENAME = "train-images-idx3-ubyte.gz";
     public static final String TRAINING_FILES_FILENAME_UNZIPPED = "train-images-idx3-ubyte";
-    private static final String TRAINING_FILE_LABELS_URL =
-                    "http://deeplearning4j-resources.westus2.cloudapp.azure.com/mnist/train-labels-idx1-ubyte.gz";
+    private static final String TRAINING_FILE_LABELS_URL = basicURL + "/mnist/train-labels-idx1-ubyte.gz";
     private static final String TRAINING_FILE_LABELS_MD_5 = "d53e105ee54ea40749a09fcbcd1e9432";
     private static final String TRAINING_FILE_LABELS_FILENAME = "train-labels-idx1-ubyte.gz";
     public static final String TRAINING_FILE_LABELS_FILENAME_UNZIPPED = "train-labels-idx1-ubyte";
 
     //Test data:
-    private static final String TEST_FILES_URL = "http://deeplearning4j-resources.westus2.cloudapp.azure.com/mnist/t10k-images-idx3-ubyte.gz";
+    private static final String TEST_FILES_URL = basicURL + "/mnist/t10k-images-idx3-ubyte.gz";
     private static final String TEST_FILES_MD_5 = "9fb629c4189551a2d022fa330f9573f3";
     private static final String TEST_FILES_FILENAME = "t10k-images-idx3-ubyte.gz";
     public static final String TEST_FILES_FILENAME_UNZIPPED = "t10k-images-idx3-ubyte";
-    private static final String TEST_FILE_LABELS_URL = "http://deeplearning4j-resources.westus2.cloudapp.azure.com/mnist/t10k-labels-idx1-ubyte.gz";
+    private static final String TEST_FILE_LABELS_URL = basicURL + "/mnist/t10k-labels-idx1-ubyte.gz";
     private static final String TEST_FILE_LABELS_MD_5 = "ec29112dd5afa0611ce80d1b7f02629c";
     private static final String TEST_FILE_LABELS_FILENAME = "t10k-labels-idx1-ubyte.gz";
     public static final String TEST_FILE_LABELS_FILENAME_UNZIPPED = "t10k-labels-idx1-ubyte";
